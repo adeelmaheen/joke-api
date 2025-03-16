@@ -19,11 +19,11 @@ jokes = [
 ]
 
 
-# @app.get("/")
-# def read_root():
-#     return {"messsage": "Welcome to Joke Generator API"}
-
 @app.get("/")
+def read_root():
+    return {"messsage": "Welcome to Joke Generator API"}
+
+@app.get("/jokes")
 def get_joke():
     """ Returns a random joke """
     return {"Joke": random.choice(jokes)}
